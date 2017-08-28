@@ -25,7 +25,7 @@ function onAfterSaveCell(row,cellName,cellValue){
     deliveryID: row.deliveryID
   };
   console.log(temp);
-  axios.put('http://localhost:3012/cars',temp).
+  axios.put('http://localhost:3012/cars',JSON.stringify(temp)).
   then(function(response)
   {
     console.log(response);
